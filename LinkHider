@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Link Generator</title>
+    <style>
+        body {
+            background-color: #202225;
+            color: #fff;
+            font-family: Arial, sans-serif;
+            padding: 20px;
+        }
+        
+        h1 {
+            font-size: 24px;
+        }
+        
+        label {
+            font-size: 18px;
+            display: block;
+            margin-bottom: 10px;
+        }
+        
+        input[type="text"] {
+            width: 300px;
+            height: 30px;
+            font-size: 16px;
+            padding: 5px;
+            border: none;
+            border-radius: 3px;
+            margin-bottom: 10px;
+        }
+        
+        button {
+            background-color: #7289DA;
+            color: #fff;
+            font-size: 18px;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 3px;
+            cursor: pointer;
+        }
+        
+        p {
+            font-size: 16px;
+            margin-top: 20px;
+            word-break: break-all;
+        }
+    </style>
+</head>
+<body>
+    <h1>Link Generator</h1>
+    
+    <label for="linkInput">Voer een link in:</label>
+    <input type="text" id="linkInput">
+    <button onclick="generateLink()">Generate link</button>
+    
+    <p id="generatedLink"></p>
+    
+    <script>
+        function generateLink() {
+            var input = document.getElementById("linkInput").value;
+            var generatedLink = "https://example.com/link?target=" + encodeURIComponent(input);
+            document.getElementById("generatedLink").innerText = generatedLink;
+        }
+    </script>
+</body>
+</html
